@@ -5,12 +5,16 @@ export const GlobalStyle = createGlobalStyle`
 		--body-bg: #1c1c1c;
 		--main-color: #03C9D7;
 		--txt-color: #fff;
+		--white-color: #fff;
 
 		--box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+		--box-shadow-button: 0 0 7px 8px rgb(3 201 215 / 50%);
+		--box-shadow-button-hover: 0 0 7px 15px rgb(3 201 215 / 50%);
 
 		--header-height: 7.5rem;
 		--footer-height: 4rem;
-		--border-radius: 30px;
+
+		--border-radius: 1rem;
 
 		--mobile-width: 600px;
 		--tablet-width: 1024px;
@@ -23,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 		--font-med: 1.2rem;
 		--font-small: 1rem;
 
-		--transition: all 0.2s ease-in-out;
+		--transition: all 0.2s ease;
 	}
 
 	* {
