@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { memo, useEffect, useState } from "react";
+import apiSettings from "../../api";
+import { CATEGORY } from "../../api/config";
 import Button from "../Button";
+import TrailerModal from "../TrailerModal";
 import {
   Actions,
   Content,
@@ -11,7 +14,28 @@ import {
   Wrapper,
 } from "./MovieInfo.style";
 
-const MovieInfo = ({ title, overview, poster, slideChanged }) => {
+const MovieInfo = ({ id, title, overview, poster, slideChanged }) => {
+  const [activeModal, setActiveModal] = useState(false);
+  const [movieVideo, setMovieVideo] = useState([]);
+
+  const handleClick = () => {
+    setActiveModal((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    const getMovieVideo = async () => {
+      try {
+        const res = await apiSettings.getVideos(CATEGORY.movie, id);
+
+        setMovieVideo(res.results);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    getMovieVideo();
+  }, [id]);
+
   return (
     <Wrapper>
       <Content>
@@ -27,22 +51,28 @@ const MovieInfo = ({ title, overview, poster, slideChanged }) => {
               boxShadowUnset
               border
               outline
-              handleClick={() => console.log("Watch trailer!")}
+              handleClick={handleClick}
             >
               Watch trailer
             </Button>
           </Actions>
         </Text>
         <Poster src={poster} alt={title} slideChanged={slideChanged} />
+
+        {activeModal && (
+          <TrailerModal movieVideo={movieVideo} handleClick={handleClick} />
+        )}
       </Content>
     </Wrapper>
   );
 };
 
 MovieInfo.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
+  slideChanged: PropTypes.bool.isRequired,
 };
 
-export default MovieInfo;
+export default memo(MovieInfo);

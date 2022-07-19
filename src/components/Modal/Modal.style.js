@@ -20,12 +20,13 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 2rem;
+  padding: 2rem 4rem;
+  padding-bottom: 4rem;
   background-color: var(--body-bg);
   border-radius: var(--border-radius);
-  width: 50%;
+  width: 70%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20000;

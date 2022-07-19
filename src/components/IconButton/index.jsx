@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Wrapper } from "./IconButton.style";
 import PropTypes from "prop-types";
 
@@ -15,4 +15,4 @@ IconButton.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default IconButton;
+export default memo(IconButton);

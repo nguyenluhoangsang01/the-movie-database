@@ -7,6 +7,8 @@ const BACKDROP_SIZE = "original";
 // w92, w154, w185, w342, w500, w780, original
 const POSTER_SIZE = "w780";
 
+const YOUTUBE_VIDEO_URL = "https://www.youtube.com/embed";
+
 const CATEGORY = {
   movie: "movie",
   tv: "tv",
@@ -33,4 +35,5 @@ export {
   CATEGORY,
   MOVIE_TYPES,
   TV_TYPES,
+  YOUTUBE_VIDEO_URL,
 };

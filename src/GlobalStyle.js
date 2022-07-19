@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
 		--font-big: 1.6rem;
 		--font-med: 1.3rem;
 		--font-small: 1.1rem;
+		--font-close-button: 2.5rem;
 
 		--transition: all 0.2s ease;
 	}
@@ -50,6 +51,8 @@ export const GlobalStyle = createGlobalStyle`
 
 		color: var(--txt-color);
 		background-color: var(--body-bg);
+
+		user-select: none;
 
 		${"" /* test */}
 		height: 300vh

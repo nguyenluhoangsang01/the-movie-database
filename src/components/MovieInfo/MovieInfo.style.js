@@ -24,7 +24,7 @@ export const Heading = styled.h2`
   line-height: 1;
   cursor: auto;
   transition: var(--transition-top-opacity);
-  animation: ${({ slideChanged }) => slideChanged && "topToBottom 0.8s ease"};
+  animation: ${({ slideChanged }) => slideChanged && "topToBottom 0.7s ease"};
 `;
 export const Overview = styled.p`
   position: relative;
@@ -34,7 +34,7 @@ export const Overview = styled.p`
   line-height: 1.5;
   cursor: auto;
   transition: var(--transition);
-  animation: ${({ slideChanged }) => slideChanged && "topToBottom 2s ease"};
+  animation: ${({ slideChanged }) => slideChanged && "topToBottom 1.5s ease"};
 `;
 
 export const Actions = styled.div`
@@ -42,7 +42,7 @@ export const Actions = styled.div`
   display: flex;
   gap: 3rem;
   transition: var(--transition);
-  animation: ${({ slideChanged }) => slideChanged && "topToBottom 3s ease"};
+  animation: ${({ slideChanged }) => slideChanged && "topToBottom 2s ease"};
 `;
 
 export const Poster = styled.img`

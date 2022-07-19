@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Wrapper } from "./Button.style";
 import PropTypes from "prop-types";
 
@@ -32,4 +32,4 @@ Button.propTypes = {
   outline: PropTypes.bool,
 };
 
-export default Button;
+export default memo(Button);

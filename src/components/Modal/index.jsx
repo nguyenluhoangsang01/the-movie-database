@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { memo } from "react";
 import { MdOutlineCancel } from "react-icons/md";
 import IconButton from "../IconButton";
 import { Container, Content, Wrapper } from "./Modal.style";
 
-const Modal = ({ handleClick }) => {
+const Modal = ({ handleClick, children }) => {
   return (
     <Wrapper>
       <Container onClick={handleClick} />
@@ -12,6 +12,8 @@ const Modal = ({ handleClick }) => {
         <IconButton handleClick={handleClick}>
           <MdOutlineCancel />
         </IconButton>
+
+        {children}
       </Content>
     </Wrapper>
   );
@@ -19,6 +21,7 @@ const Modal = ({ handleClick }) => {
 
 Modal.propTypes = {
   handleClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
-export default Modal;
+export default memo(Modal);

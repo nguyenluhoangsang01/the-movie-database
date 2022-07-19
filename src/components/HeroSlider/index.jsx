@@ -49,6 +49,7 @@ const HeroSlider = () => {
               src={`${IMAGE_BASE_URL}/${BACKDROP_SIZE}${item.backdrop_path}`}
             />
             <MovieInfo
+              id={item.id}
               poster={`${IMAGE_BASE_URL}/${POSTER_SIZE}${item.poster_path}`}
               title={item.title}
               overview={item.overview}
