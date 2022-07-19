@@ -6,12 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     --body-bg: #1c1c1c;
 		--txt-color: #fff;
 
-		${"" /* Light Theme */}
-		${
-      "" /* --body-bg: #fff;
-		--txt-color: #1c1c1c; */
-    }
-
 		--main-color: #03C9D7;
 
 		--white-color: #fff;
@@ -19,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 		--modal-color: rgba(0, 0, 0, 0.5);
 
 		--box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-		--box-shadow-button: 0 0 7px 8px rgb(3 201 215 / 50%);
-		--box-shadow-button-hover: 0 0 7px 15px rgb(3 201 215 / 50%);
+		--box-shadow-button: 0 0 7px 8px #03c9d780;
+		--box-shadow-button-hover: 0 0 7px 15px #03c9d780;
 
 		--header-height: 7.5rem;
 		--footer-height: 4rem;
@@ -33,10 +27,10 @@ export const GlobalStyle = createGlobalStyle`
 		--max-width: 1280px;
 
 		--font-family: 'Montserrat', sans-serif;
-		--font-super-big: 2.5rem;
-		--font-big: 1.5rem;
-		--font-med: 1.2rem;
-		--font-small: 1rem;
+		--font-super-big: 5rem;
+		--font-big: 1.6rem;
+		--font-med: 1.3rem;
+		--font-small: 1.1rem;
 
 		--transition: all 0.2s ease;
 	}
@@ -56,14 +50,37 @@ export const GlobalStyle = createGlobalStyle`
 
 		color: var(--txt-color);
 		background-color: var(--body-bg);
+
+		${"" /* test */}
+		height: 300vh
 	}
 
 	.shrink {
 		height: var(--header-height);
-		background-color: var(--body-bg);
+		background-color: transparent;
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
+	}
+
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+		bottom: 4rem;
+	}
+
+	@keyframes zoomOut {
+		0%   {transform: scale(0);}
+		100% {transform: scale(1);}
+	}
+
+	@keyframes topToBottom {
+		0%	 {
+			top: -10rem;
+			opacity: 0;
+		}
+		100% {
+			top: 0;
+			opacity: 1;
+		}
 	}
 `;

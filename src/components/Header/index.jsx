@@ -20,10 +20,12 @@ const headerNavLinks = [
 
 const Header = () => {
   const headerRef = useRef(null);
+  const scrollTopMaxHeight = 100;
 
   useEffect(() => {
     const shrinkHeader = () => {
-      document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
+      document.body.scrollTop > scrollTopMaxHeight ||
+      document.documentElement.scrollTop > scrollTopMaxHeight
         ? headerRef.current.classList.add("shrink")
         : headerRef.current.classList.remove("shrink");
     };

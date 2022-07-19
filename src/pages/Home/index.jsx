@@ -1,20 +1,8 @@
-import React, { useState } from "react";
-import Modal from "../../components/Modal";
+import React from "react";
+import HeroSlider from "../../components/HeroSlider";
 
 const Home = () => {
-  const [isActive, setIsActive] = useState(true);
-
-  const handleClick = () => {
-    setIsActive((prevState) => !prevState);
-  };
-
-  return (
-    <div>
-      {isActive && <Modal handleClick={handleClick} />}
-
-      <div onClick={handleClick}>Open Modal</div>
-    </div>
-  );
+  return <HeroSlider />;
 };
 
 export default Home;

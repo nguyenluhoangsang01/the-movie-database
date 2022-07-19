@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const Wrapper = styled.header`
   padding: 0 4rem;
   height: var(--header-height);
+  background-color: transparent;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 export const Content = styled.div`
   display: flex;

@@ -8,6 +8,7 @@ const Button = ({
   transparent,
   boxShadowUnset,
   border,
+  outline,
 }) => {
   return (
     <Wrapper
@@ -15,6 +16,7 @@ const Button = ({
       transparent={transparent}
       boxShadowUnset={boxShadowUnset}
       border={border}
+      outline={outline}
     >
       {children}
     </Wrapper>
@@ -27,6 +29,7 @@ Button.propTypes = {
   transparent: PropTypes.bool,
   boxShadowUnset: PropTypes.bool,
   border: PropTypes.bool,
+  outline: PropTypes.bool,
 };
 
 export default Button;
