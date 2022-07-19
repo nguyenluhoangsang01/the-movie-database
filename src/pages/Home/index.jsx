@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../../components/Modal";
 
 const Home = () => {
-  return <div>Home</div>;
+  const [isActive, setIsActive] = useState(true);
+
+  const handleClick = () => {
+    setIsActive((prevState) => !prevState);
+  };
+
+  return (
+    <div>
+      {isActive && <Modal handleClick={handleClick} />}
+
+      <div onClick={handleClick}>Open Modal</div>
+    </div>
+  );
 };
 
 export default Home;

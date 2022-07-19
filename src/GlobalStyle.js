@@ -2,10 +2,21 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 	:root {
-		--body-bg: #1c1c1c;
-		--main-color: #03C9D7;
+		${"" /* Dark Theme */}
+    --body-bg: #1c1c1c;
 		--txt-color: #fff;
+
+		${"" /* Light Theme */}
+		${
+      "" /* --body-bg: #fff;
+		--txt-color: #1c1c1c; */
+    }
+
+		--main-color: #03C9D7;
+
 		--white-color: #fff;
+
+		--modal-color: rgba(0, 0, 0, 0.5);
 
 		--box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 		--box-shadow-button: 0 0 7px 8px rgb(3 201 215 / 50%);

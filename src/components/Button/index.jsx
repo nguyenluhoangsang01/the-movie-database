@@ -1,5 +1,6 @@
 import React from "react";
 import { Wrapper } from "./Button.style";
+import PropTypes from "prop-types";
 
 const Button = ({
   handleClick,
@@ -18,6 +19,14 @@ const Button = ({
       {children}
     </Wrapper>
   );
+};
+
+Button.propTypes = {
+  handleClick: PropTypes.func,
+  children: PropTypes.node.isRequired,
+  transparent: PropTypes.bool,
+  boxShadowUnset: PropTypes.bool,
+  border: PropTypes.bool,
 };
 
 export default Button;
