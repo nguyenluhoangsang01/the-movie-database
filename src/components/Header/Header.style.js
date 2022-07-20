@@ -59,8 +59,11 @@ export const NavLinks = styled.div`
   ${"" /* Breakpoint */}
   @media screen and (max-width: 480px) {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    border-top: 1px solid var(--white-color);
+    bottom: 1rem;
+    left: 0px;
+    right: 0px;
+    padding-top: 1rem;
+    z-index: 1;
   }
 `;
