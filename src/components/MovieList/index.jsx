@@ -3,20 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SwiperSlide } from "swiper/react";
 import apiSettings from "../../api";
-import { IMAGE_BASE_URL, POSTER_SIZE } from "../../api/config";
 import Button from "../Button";
+import MovieCard from "../MovieCard";
 import {
   Content,
   ContentBody,
   ContentHeader,
   HeadingText,
-  ImageSlide,
-  StyledLink,
-  Title,
   Wrapper,
 } from "./MovieList.style";
 
-const MovieList = ({ title, type, category, id, link }) => {
+const MovieList = ({ title, type, category, link }) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -24,7 +21,7 @@ const MovieList = ({ title, type, category, id, link }) => {
       let res = [];
 
       if (type === "similar") {
-        res = await apiSettings.getSimilar(category, id);
+        res = await apiSettings.getSimilar(category);
       } else {
         res = await apiSettings.getList(category, type);
       }
@@ -33,7 +30,7 @@ const MovieList = ({ title, type, category, id, link }) => {
     };
 
     getList();
-  }, [type, category, id]);
+  }, [type, category]);
 
   return (
     <Wrapper>
@@ -50,13 +47,7 @@ const MovieList = ({ title, type, category, id, link }) => {
         <ContentBody grabCursor spaceBetween={10} slidesPerView={"auto"}>
           {list.map((item) => (
             <SwiperSlide key={item.id}>
-              <StyledLink to={`/${category}/${id}`}>
-                <ImageSlide
-                  src={`${IMAGE_BASE_URL}/${POSTER_SIZE}/${item.poster_path}`}
-                  alt={item.title}
-                />
-                <Title>{item.title || item.name}</Title>
-              </StyledLink>
+              <MovieCard item={item} category={category} />
             </SwiperSlide>
           ))}
         </ContentBody>
@@ -68,7 +59,6 @@ const MovieList = ({ title, type, category, id, link }) => {
 MovieList.propTypes = {
   type: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };

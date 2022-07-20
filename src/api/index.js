@@ -8,8 +8,8 @@ export const defaultConfig = {
 };
 
 const apiSettings = {
-  getList: async (category, type) => {
-    const endpoint = `${API_URL}/${category}/${type}?api_key=${API_KEY}`;
+  getList: async (category, type, page) => {
+    const endpoint = `${API_URL}/${category}/${type}?api_key=${API_KEY}&page=${page}`;
     return await (await fetch(endpoint)).json();
   },
 
@@ -33,8 +33,8 @@ const apiSettings = {
     return await (await fetch(endpoint)).json();
   },
 
-  search: async (category) => {
-    const endpoint = `${API_URL}/search/${category}?api_key=${API_KEY}`;
+  getSearch: async (category, keyword) => {
+    const endpoint = `${API_URL}/search/${category}?api_key=${API_KEY}&query=${keyword}`;
     return await (await fetch(endpoint)).json();
   },
 };

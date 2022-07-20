@@ -8,14 +8,12 @@ const Home = () => {
     <>
       <HeroSlider />
       <MovieList
-        id={810693}
         title={`trending ${CATEGORY.movie}s`}
         category={CATEGORY.movie}
         type={MOVIE_TYPES.popular}
         link={CATEGORY.movie}
       />
       <MovieList
-        id={810693}
         title={`top rated ${CATEGORY.movie}s`}
         category={CATEGORY.movie}
         type={MOVIE_TYPES.top_rated}
@@ -23,15 +21,13 @@ const Home = () => {
       />
 
       <MovieList
-        id={810693}
         title={`trending ${CATEGORY.tv}`}
         category={CATEGORY.tv}
         type={TV_TYPES.popular}
         link={CATEGORY.tv}
       />
       <MovieList
-        id={810693}
-        title={`top rated ${CATEGORY.tv}s`}
+        title={`top rated ${CATEGORY.tv}`}
         category={CATEGORY.tv}
         type={TV_TYPES.top_rated}
         link={CATEGORY.tv}

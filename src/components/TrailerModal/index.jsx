@@ -24,7 +24,7 @@ const TrailerModal = ({ movieVideo, handleClick }) => {
 };
 
 TrailerModal.propTypes = {
-  movieVideo: PropTypes.array.isRequired,
+  movieVideo: PropTypes.object.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
 
