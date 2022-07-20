@@ -42,11 +42,12 @@ const HeroSlider = () => {
 
   return (
     <Wrapper>
-      <Swiper onSlideChange={handleSlideChange}>
+      <Swiper onSlideChange={handleSlideChange} grabCursor>
         {movieList.slice(0, Math.round(movieList.length / 2)).map((item) => (
           <SwiperSlide key={item.id}>
             <ImgSide
               src={`${IMAGE_BASE_URL}/${BACKDROP_SIZE}${item.backdrop_path}`}
+              alt={item.title}
             />
             <MovieInfo
               id={item.id}

@@ -9,6 +9,11 @@ export const Wrapper = styled.header`
   top: 0;
   left: 0;
   right: 0;
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 480px) {
+    position: unset;
+  }
 `;
 export const Content = styled.div`
   display: flex;
@@ -21,7 +26,7 @@ export const Content = styled.div`
 
   a {
     ${"" /* Breakpoint */}
-    @media screen and (max-width: 468px) {
+    @media screen and (max-width: 480px) {
       margin: 0 auto;
     }
   }
@@ -31,7 +36,7 @@ export const LogoImg = styled.img`
   width: 200px;
 
   ${"" /* Breakpoint */}
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: 150px;
   }
 `;
@@ -52,9 +57,9 @@ export const NavLinks = styled.div`
   }
 
   ${"" /* Breakpoint */}
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 480px) {
     position: absolute;
-    bottom: var(--footer-height);
+    bottom: 0;
     left: 0;
     right: 0;
   }

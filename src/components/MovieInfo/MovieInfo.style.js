@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: absolute;
-  width: 100%;
   top: 15%;
 `;
 export const Content = styled.div`
@@ -11,10 +10,20 @@ export const Content = styled.div`
   justify-content: space-around;
   width: 80%;
   margin: 0 auto;
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 1024px) {
+    margin: 4rem auto 0;
+  }
 `;
 
 export const Text = styled.div`
   width: 55%;
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 export const Heading = styled.h2`
   position: relative;
@@ -25,6 +34,11 @@ export const Heading = styled.h2`
   cursor: auto;
   transition: var(--transition-top-opacity);
   animation: ${({ slideChanged }) => slideChanged && "topToBottom 0.7s ease"};
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 768px) {
+    font-size: 4rem;
+  }
 `;
 export const Overview = styled.p`
   position: relative;
@@ -35,6 +49,11 @@ export const Overview = styled.p`
   cursor: auto;
   transition: var(--transition);
   animation: ${({ slideChanged }) => slideChanged && "topToBottom 1.5s ease"};
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-med);
+  }
 `;
 
 export const Actions = styled.div`
@@ -50,4 +69,10 @@ export const Poster = styled.img`
   width: 35rem;
   transition: var(--transition);
   animation: ${({ slideChanged }) => slideChanged && "zoomOut 0.5s ease "};
+  height: 100%;
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 1024px) {
+    width: 0;
+  }
 `;

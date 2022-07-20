@@ -10,7 +10,7 @@ export const Wrapper = styled.button`
     transparent ? "transparent" : "var(--main-color)"};
   color: var(--txt-color);
   border-radius: var(--border-radius);
-  padding: 0.5rem 2rem;
+  padding: 0.3em 2.7rem;
   font-size: var(--font-big);
   font-weight: 600;
   box-shadow: ${({ boxShadowUnset }) =>
@@ -24,5 +24,15 @@ export const Wrapper = styled.button`
       outline ? "var(--white-color)" : "var(--main-color)"};
     color: ${({ outline }) =>
       outline ? "var(--main-color)" : "var(--white-color)"};
+  }
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 768px) {
+    padding: 0.1em 2rem;
+  }
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 480px) {
+    font-size: var(--font-med);
   }
 `;

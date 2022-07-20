@@ -2,12 +2,21 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
-  }
+  margin-bottom: 3rem;
 `;
+
 export const ImgSide = styled.img`
-  filter: blur(2px);
+  filter: blur(1.5px);
+  width: 100%;
+
+  ${"" /* Breakpoint */}
+  @media screen and (max-width: 480px) {
+    padding-bottom: 33rem;
+    border-bottom: 1px solid white;
+  }
+
+  @media (min-width: 480px) and (max-width: 655px) {
+    padding-bottom: 20rem;
+    border-bottom: 1px solid white;
+  }
 `;
