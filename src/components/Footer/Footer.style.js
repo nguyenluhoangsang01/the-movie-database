@@ -26,8 +26,9 @@ export const Content = styled.div`
 `;
 
 export const FooterLogo = styled.div`
-  margin-bottom: 5rem;
-  width: 26rem;
+  width: 15rem;
+  margin-bottom: 3rem;
+  margin-top: -2rem;
 `;
 export const FooterLogoImg = styled.img`
   width: 100%;
@@ -62,14 +63,19 @@ export const FooterContentMenu = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  transition: var(--transition);
   color: var(--txt-color);
   text-transform: capitalize;
   font-size: var(--font-big);
   font-weight: 600;
   line-height: 2.5;
+  text-align: center;
 
-  &:hover {
+  span {
+    transition: var(--transition);
+  }
+
+  &:hover span {
     color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
   }
 `;

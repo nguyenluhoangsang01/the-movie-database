@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import RMDBLogo from "../../assets/images/react-movie-logo.svg";
+import TMDBLogo from "../../assets/images/tmdb_logo.svg";
 import {
   Content,
   FooterContent,
@@ -18,30 +18,52 @@ const Footer = () => {
       <Content>
         <FooterLogo>
           <Link to="/">
-            <FooterLogoImg src={RMDBLogo} alt="react-movie-logo" />
+            <FooterLogoImg src={TMDBLogo} alt="react-movie-logo" />
           </Link>
         </FooterLogo>
 
         <FooterContent>
           <FooterContentMenus>
             <FooterContentMenu>
-              <StyledLink to="/">home</StyledLink>
-              <StyledLink to="/">contact us</StyledLink>
-              <StyledLink to="/">term of services</StyledLink>
-              <StyledLink to="/">about us</StyledLink>
+              <StyledLink to="/">
+                <span>home</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>about us</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>contact us</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>term of services</span>
+              </StyledLink>
             </FooterContentMenu>
 
             <FooterContentMenu>
-              <StyledLink to="/">live</StyledLink>
-              <StyledLink to="/">FAQ</StyledLink>
-              <StyledLink to="/">premium</StyledLink>
-              <StyledLink to="/">privacy policy</StyledLink>
+              <StyledLink to="/">
+                <span>FAQ</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>live</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>premium</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>privacy policy</span>
+              </StyledLink>
             </FooterContentMenu>
 
             <FooterContentMenu>
-              <StyledLink to="/">you must watch</StyledLink>
-              <StyledLink to="/">recent release</StyledLink>
-              <StyledLink to="/">top IMDB</StyledLink>
+              <StyledLink to="/">
+                <span>top IMDB</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>recent release</span>
+              </StyledLink>
+              <StyledLink to="/">
+                <span>you must watch</span>
+              </StyledLink>
             </FooterContentMenu>
           </FooterContentMenus>
         </FooterContent>
