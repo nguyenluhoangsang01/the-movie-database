@@ -78,6 +78,15 @@ export const GlobalStyle = createGlobalStyle`
 		}
 	}
 
+	.search-icon {
+		position: absolute;
+    top: 50%;
+		right: 2px;
+    transform: translateY(-50%);
+		display: flex;
+		align-items: center;
+	}
+
 	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
 		bottom: 4rem;
 	}

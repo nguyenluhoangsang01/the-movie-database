@@ -9,6 +9,7 @@ const Button = ({
   boxShadowUnset,
   border,
   outline,
+  searchIcon,
 }) => {
   return (
     <Wrapper
@@ -17,6 +18,7 @@ const Button = ({
       boxShadowUnset={boxShadowUnset}
       border={border}
       outline={outline}
+      className={`${searchIcon && `search-icon`}`}
     >
       {children}
     </Wrapper>
