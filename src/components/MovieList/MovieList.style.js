@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Swiper } from "swiper/react";
 
 export const Wrapper = styled.div`
-  padding: 0 4rem;
+  padding: 0 2rem;
   margin-bottom: 5rem;
 `;
 
@@ -16,6 +16,14 @@ export const ContentHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  span {
+    font-size: 2rem;
+    display: inline-flex;
+    align-self: center;
+    justify-self: center;
+    margin-left: 0.5rem;
+  }
 `;
 export const HeadingText = styled.h3`
   font-size: var(--font-big);

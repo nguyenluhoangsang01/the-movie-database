@@ -12,6 +12,7 @@ import {
   HeadingText,
   Wrapper,
 } from "./MovieList.style";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const MovieList = ({ title, type, category, link }) => {
   const [list, setList] = useState([]);
@@ -40,6 +41,9 @@ const MovieList = ({ title, type, category, link }) => {
           <Link to={link}>
             <Button transparent boxShadowUnset border outline>
               View more
+              <span>
+                <BiRightArrowAlt />
+              </span>
             </Button>
           </Link>
         </ContentHeader>

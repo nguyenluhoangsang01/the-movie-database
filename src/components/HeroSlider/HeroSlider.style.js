@@ -9,7 +9,6 @@ export const ImgSide = styled.img`
   filter: blur(1.5px);
   width: 100%;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 480px) {
     padding-bottom: 33rem;
     border-bottom: 1px solid var(--white-color);

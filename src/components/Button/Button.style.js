@@ -4,6 +4,10 @@ export const Wrapper = styled.button`
   cursor: pointer;
   font-family: var(--font-family);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border: ${({ border }) =>
     border ? `3px solid var(--white-color)` : `3px solid var(--main-color)`};
   background-color: ${({ transparent }) =>
@@ -26,12 +30,10 @@ export const Wrapper = styled.button`
       outline ? "var(--main-color)" : "var(--white-color)"};
   }
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 768px) {
     padding: 0.1em 2rem;
   }
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 480px) {
     font-size: var(--font-med);
   }

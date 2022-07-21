@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  padding: 0 4rem;
+  padding: 0 2rem;
   height: var(--header-height);
   background-color: transparent;
   z-index: 9999;
@@ -10,7 +10,6 @@ export const Wrapper = styled.header`
   left: 0;
   right: 0;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 480px) {
     position: unset;
   }
@@ -25,7 +24,6 @@ export const Content = styled.div`
   color: var(--txt-color);
 
   a {
-    ${"" /* Breakpoint */}
     @media screen and (max-width: 480px) {
       margin: 0 auto;
     }
@@ -35,7 +33,6 @@ export const Content = styled.div`
 export const LogoImg = styled.img`
   width: 200px;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 768px) {
     width: 150px;
   }
@@ -56,14 +53,13 @@ export const NavLinks = styled.div`
     }
   }
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 480px) {
     position: absolute;
-    border-top: 1px solid var(--white-color);
-    bottom: 1rem;
-    left: 0px;
-    right: 0px;
-    padding-top: 1rem;
+    background-color: var(--body-bg);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
     z-index: 1;
   }
 `;

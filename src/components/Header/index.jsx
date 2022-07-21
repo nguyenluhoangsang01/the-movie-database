@@ -38,7 +38,15 @@ const Header = () => {
   return (
     <Wrapper ref={headerRef}>
       <Content>
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() =>
+            window.scrollTo({
+              top: 100,
+              behavior: "smooth",
+            })
+          }
+        >
           <LogoImg src={RMDBLogo} alt="react-movie-logo" />
         </Link>
 

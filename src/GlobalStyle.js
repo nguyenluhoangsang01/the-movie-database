@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 		--box-shadow-button-hover: 0 0 7px 15px #03c9d780;
 
 		--header-height: 7.5rem;
-		${"" /* Breakpoint */}
+
 		@media screen and (max-width: 768px) {
 			--header-height: 6.7rem;
 		}
@@ -72,19 +72,9 @@ export const GlobalStyle = createGlobalStyle`
 		left: 0;
 		right: 0;
 
-		${"" /* Breakpoint */}
 		@media screen and (max-width: 480px) {
 			position: unset;
 		}
-	}
-
-	.search-icon {
-		position: absolute;
-    top: 50%;
-		right: 2px;
-    transform: translateY(-50%);
-		display: flex;
-		align-items: center;
 	}
 
 	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{

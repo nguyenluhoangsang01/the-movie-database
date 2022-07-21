@@ -29,6 +29,8 @@ export const FooterLogo = styled.div`
   width: 15rem;
   margin-bottom: 3rem;
   margin-top: -2rem;
+
+  cursor: pointer;
 `;
 export const FooterLogoImg = styled.img`
   width: 100%;
@@ -46,13 +48,11 @@ export const FooterContentMenus = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 20rem;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 10rem;
   }
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 480px) {
     gap: 5rem;
   }

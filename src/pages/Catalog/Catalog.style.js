@@ -23,4 +23,6 @@ export const CatalogHeading = styled.h2`
   cursor: text;
 `;
 
-export const CatalogContent = styled.div``;
+export const CatalogContent = styled.div`
+  margin-top: 5rem;
+`;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import TMDBLogo from "../../assets/images/tmdb_logo.svg";
 import {
   Content,
@@ -16,10 +15,15 @@ const Footer = () => {
   return (
     <Wrapper>
       <Content>
-        <FooterLogo>
-          <Link to="/">
-            <FooterLogoImg src={TMDBLogo} alt="react-movie-logo" />
-          </Link>
+        <FooterLogo
+          onClick={() =>
+            window.scrollTo({
+              top: 100,
+              behavior: "smooth",
+            })
+          }
+        >
+          <FooterLogoImg src={TMDBLogo} alt="react-movie-logo" />
         </FooterLogo>
 
         <FooterContent>

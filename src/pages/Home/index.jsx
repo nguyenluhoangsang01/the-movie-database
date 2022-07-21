@@ -2,14 +2,11 @@ import React from "react";
 import { CATEGORY, MOVIE_TYPES, TV_TYPES } from "../../api/config";
 import HeroSlider from "../../components/HeroSlider";
 import MovieList from "../../components/MovieList";
-import SearchBar from "../../components/SearchBar";
 
 const Home = () => {
   return (
     <>
       <HeroSlider />
-
-      <SearchBar />
 
       <MovieList
         title={`trending ${CATEGORY.movie}s`}

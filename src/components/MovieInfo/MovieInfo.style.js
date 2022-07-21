@@ -11,7 +11,6 @@ export const Content = styled.div`
   width: 80%;
   margin: 0 auto;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 1024px) {
     margin: 4rem auto 0;
   }
@@ -20,7 +19,6 @@ export const Content = styled.div`
 export const Text = styled.div`
   width: 55%;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
@@ -35,7 +33,6 @@ export const Heading = styled.h2`
   transition: var(--transition-top-opacity);
   animation: ${({ slideChanged }) => slideChanged && "topToBottom 0.7s ease"};
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 768px) {
     font-size: 4rem;
   }
@@ -50,7 +47,6 @@ export const Overview = styled.p`
   transition: var(--transition);
   animation: ${({ slideChanged }) => slideChanged && "topToBottom 1.5s ease"};
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 768px) {
     font-size: var(--font-med);
   }
@@ -71,7 +67,6 @@ export const Poster = styled.img`
   animation: ${({ slideChanged }) => slideChanged && "zoomOut 0.5s ease "};
   height: 100%;
 
-  ${"" /* Breakpoint */}
   @media screen and (max-width: 1024px) {
     width: 0;
   }

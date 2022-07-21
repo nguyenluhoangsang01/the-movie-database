@@ -4,6 +4,7 @@ import apiSettings from "../../api";
 import { CATEGORY, MOVIE_TYPES, TV_TYPES } from "../../api/config";
 import Button from "../Button";
 import MovieCard from "../MovieCard";
+import SearchBar from "../SearchBar";
 import { Content, Wrapper } from "./MovieGrid.style";
 
 const MovieGrid = () => {
@@ -63,6 +64,8 @@ const MovieGrid = () => {
 
   return (
     <Wrapper>
+      <SearchBar searchTerm={keyword} totalResults={totalResults} />
+
       <Content>
         {item.map((item) => (
           <MovieCard key={item.id} item={item} category={category} />
@@ -77,7 +80,7 @@ const MovieGrid = () => {
           outline
           handleClick={handleClick}
         >
-          Load More {itemLength}/{totalResults}
+          Load More
         </Button>
       )}
     </Wrapper>
