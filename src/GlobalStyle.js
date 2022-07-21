@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 
 		--footer-height: 4rem;
 
-		--border-radius: 1rem;
+		--border-radius: 2rem;
 
 		--mobile-width: 600px;
 		--tablet-width: 1024px;

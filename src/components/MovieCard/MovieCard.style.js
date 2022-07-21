@@ -13,7 +13,7 @@ export const Title = styled.h4`
   top: -100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   text-shadow: 2px 2px 2px var(--main-color);
   text-transform: uppercase;
@@ -24,6 +24,7 @@ export const Title = styled.h4`
 `;
 
 export const StyledLink = styled(Link)`
+  display: block;
   position: relative;
 
   :hover {

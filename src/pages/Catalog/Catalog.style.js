@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 `;
 
 export const CatalogHeading = styled.h2`
-  font-size: var(--font-big);
+  font-size: var(--font-super-big);
   text-transform: uppercase;
   font-weight: 700;
   cursor: text;

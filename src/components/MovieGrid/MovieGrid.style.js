@@ -15,4 +15,5 @@ export const Content = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 5rem;
+  overflow: hidden;
 `;
