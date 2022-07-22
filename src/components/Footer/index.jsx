@@ -12,6 +12,10 @@ import {
 } from "./Footer.style";
 
 const Footer = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0 });
+  };
+
   return (
     <Wrapper>
       <Content>
@@ -28,43 +32,43 @@ const Footer = () => {
         <FooterContent>
           <FooterContentMenus>
             <FooterContentMenu>
-              <StyledLink to="/">
+              <StyledLink to="/" onClick={handleScrollToTop}>
                 <span>home</span>
               </StyledLink>
-              <StyledLink to="/about">
+              <StyledLink to="/about" onClick={handleScrollToTop}>
                 <span>about us</span>
               </StyledLink>
-              <StyledLink to="/contact">
+              <StyledLink to="/contact" onClick={handleScrollToTop}>
                 <span>contact us</span>
               </StyledLink>
-              <StyledLink to="/term-of-services">
+              <StyledLink to="/term-of-services" onClick={handleScrollToTop}>
                 <span>term of services</span>
               </StyledLink>
             </FooterContentMenu>
 
             <FooterContentMenu>
-              <StyledLink to="/faq">
+              <StyledLink to="/faq" onClick={handleScrollToTop}>
                 <span>FAQ</span>
               </StyledLink>
-              <StyledLink to="/live">
+              <StyledLink to="/live" onClick={handleScrollToTop}>
                 <span>live</span>
               </StyledLink>
-              <StyledLink to="/premium">
+              <StyledLink to="/premium" onClick={handleScrollToTop}>
                 <span>premium</span>
               </StyledLink>
-              <StyledLink to="/privacy-policy">
+              <StyledLink to="/privacy-policy" onClick={handleScrollToTop}>
                 <span>privacy policy</span>
               </StyledLink>
             </FooterContentMenu>
 
             <FooterContentMenu>
-              <StyledLink to="/top-imdb">
+              <StyledLink to="/top-imdb" onClick={handleScrollToTop}>
                 <span>top IMDB</span>
               </StyledLink>
-              <StyledLink to="/recent-release">
+              <StyledLink to="/recent-release" onClick={handleScrollToTop}>
                 <span>recent release</span>
               </StyledLink>
-              <StyledLink to="/must-watch">
+              <StyledLink to="/must-watch" onClick={handleScrollToTop}>
                 <span>you must watch</span>
               </StyledLink>
             </FooterContentMenu>

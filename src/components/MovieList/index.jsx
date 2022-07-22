@@ -65,7 +65,7 @@ MovieList.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
 
 export default MovieList;

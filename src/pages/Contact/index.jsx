@@ -1,7 +1,12 @@
 import React from "react";
+import { Content, Wrapper } from "./Contact.style";
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <Wrapper>
+      <Content>Contact</Content>
+    </Wrapper>
+  );
 };
 
 export default Contact;

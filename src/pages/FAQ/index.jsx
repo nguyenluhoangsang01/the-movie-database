@@ -1,7 +1,12 @@
 import React from "react";
+import { Content, Wrapper } from "./FAQ.style";
 
 const FAQ = () => {
-  return <div>FAQ</div>;
+  return (
+    <Wrapper>
+      <Content>FAQ</Content>
+    </Wrapper>
+  );
 };
 
 export default FAQ;

@@ -1,7 +1,12 @@
 import React from "react";
+import { Content, Wrapper } from "./PrivacyPolicy.style";
 
 const PrivacyPolicy = () => {
-  return <div>PrivacyPolicy</div>;
+  return (
+    <Wrapper>
+      <Content>PrivacyPolicy</Content>
+    </Wrapper>
+  );
 };
 
 export default PrivacyPolicy;

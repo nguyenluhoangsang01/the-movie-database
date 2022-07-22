@@ -1,7 +1,12 @@
 import React from "react";
+import { Content, Wrapper } from "./Live.style";
 
 const Live = () => {
-  return <div>Live</div>;
+  return (
+    <Wrapper>
+      <Content>Live</Content>
+    </Wrapper>
+  );
 };
 
 export default Live;

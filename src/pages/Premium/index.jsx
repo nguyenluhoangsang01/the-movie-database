@@ -1,7 +1,12 @@
 import React from "react";
+import { Content, Wrapper } from "./Premium.style";
 
 const Premium = () => {
-  return <div>Premium</div>;
+  return (
+    <Wrapper>
+      <Content>Premium</Content>
+    </Wrapper>
+  );
 };
 
 export default Premium;
