@@ -79,8 +79,8 @@ const SearchBar = ({ category, searchTerm, totalResults }) => {
 };
 
 SearchBar.propTypes = {
-  category: PropTypes.string.isRequired,
-  searchTerm: PropTypes.string.isRequired,
+  category: PropTypes.string,
+  searchTerm: PropTypes.string,
   totalResults: PropTypes.number,
 };
 
