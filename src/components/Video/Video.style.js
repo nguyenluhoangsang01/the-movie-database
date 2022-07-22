@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    cursor: text;
   }
 
   iframe {
