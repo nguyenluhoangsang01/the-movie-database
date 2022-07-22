@@ -80,7 +80,7 @@ const MovieGrid = () => {
           outline
           handleClick={handleClick}
         >
-          Load More
+          Load more
         </Button>
       )}
     </Wrapper>

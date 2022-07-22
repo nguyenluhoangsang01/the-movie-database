@@ -18,8 +18,7 @@ const Footer = () => {
         <FooterLogo
           onClick={() =>
             window.scrollTo({
-              top: 100,
-              behavior: "smooth",
+              top: 0,
             })
           }
         >

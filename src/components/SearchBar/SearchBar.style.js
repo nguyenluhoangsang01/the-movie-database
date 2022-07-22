@@ -40,7 +40,7 @@ export const BackButton = styled.button`
 `;
 
 export const SearchButton = styled.button`
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
   color: var(--white-color);
   background-color: var(--main-color);
@@ -53,12 +53,13 @@ export const SearchButton = styled.button`
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   border-left: 4px solid white;
-  transition: var(--transition);
   display: flex;
   align-items: center;
+  transition: var(--transition);
 
   :hover {
-    opacity: 0.8;
+    color: var(--main-color);
+    background-color: var(--white-color);
   }
 `;
 

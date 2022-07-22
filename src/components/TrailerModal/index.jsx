@@ -13,11 +13,10 @@ const TrailerModal = ({ movieVideo, handleClick }) => {
         width="100%"
         height="500px"
         src={videoUrl}
-        title={firstMovieVideo.name}
+        title={`${firstMovieVideo.site} | ${firstMovieVideo.name}`}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        muted
       ></iframe>
     </Modal>
   );

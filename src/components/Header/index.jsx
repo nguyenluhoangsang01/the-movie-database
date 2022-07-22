@@ -42,8 +42,7 @@ const Header = () => {
           to="/"
           onClick={() =>
             window.scrollTo({
-              top: 100,
-              behavior: "smooth",
+              top: 0,
             })
           }
         >
@@ -58,6 +57,7 @@ const Header = () => {
               style={({ isActive }) => ({
                 borderBottom: isActive ? "2px solid var(--main-color)" : "none",
               })}
+              onClick={() => window.scrollTo(0)}
             >
               {item.name}
             </NavLink>

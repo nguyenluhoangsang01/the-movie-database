@@ -14,7 +14,7 @@ import {
 } from "./MovieList.style";
 import { BiRightArrowAlt } from "react-icons/bi";
 
-const MovieList = ({ title, type, category, link }) => {
+const MovieList = ({ title, type, category, link, id }) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const MovieList = ({ title, type, category, link }) => {
       let res = [];
 
       if (type === "similar") {
-        res = await apiSettings.getSimilar(category);
+        res = await apiSettings.getSimilar(category, id);
       } else {
         res = await apiSettings.getList(category, type);
       }
@@ -31,14 +31,14 @@ const MovieList = ({ title, type, category, link }) => {
     };
 
     getList();
-  }, [type, category]);
+  }, [type, category, id]);
 
   return (
     <Wrapper>
       <Content>
         <ContentHeader>
           <HeadingText>{title}</HeadingText>
-          <Link to={link}>
+          <Link to={link} onClick={() => window.scrollTo(0)}>
             <Button transparent boxShadowUnset border outline>
               View more
               <span>
@@ -65,6 +65,7 @@ MovieList.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default MovieList;

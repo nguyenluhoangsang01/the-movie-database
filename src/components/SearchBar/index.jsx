@@ -26,6 +26,7 @@ const SearchBar = ({ searchTerm, totalResults }) => {
       if (e.keyCode === 13) {
         handleSearch();
         setKeyword("");
+        window.scrollTo(0);
       }
     };
     document.addEventListener("keypress", handleKeyPress);
@@ -40,11 +41,13 @@ const SearchBar = ({ searchTerm, totalResults }) => {
   const handleClick = () => {
     handleSearch();
     setKeyword("");
+    window.scrollTo(0);
   };
 
   const handleBack = () => {
     navigate(-1);
     setKeyword("");
+    window.scrollTo(0);
   };
 
   return (

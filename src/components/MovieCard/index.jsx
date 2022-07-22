@@ -6,7 +6,10 @@ import NoImage from "../../assets/images/no_image.jpg";
 
 const MovieCard = ({ item, category }) => {
   return (
-    <StyledLink to={`/${category}/${item.id}`}>
+    <StyledLink
+      to={`/${category}/${item.id}`}
+      onClick={() => window.scrollTo(0)}
+    >
       <ImageSlide
         src={
           item.poster_path

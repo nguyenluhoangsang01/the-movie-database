@@ -62,7 +62,7 @@ export const Actions = styled.div`
 
 export const Poster = styled.img`
   border-radius: var(--border-radius);
-  width: 35rem;
+  width: 32rem;
   transition: var(--transition);
   animation: ${({ slideChanged }) => slideChanged && "zoomOut 0.5s ease "};
   height: 100%;
