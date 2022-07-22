@@ -11,22 +11,22 @@ import {
 } from "./SearchBar.style";
 import PropTypes from "prop-types";
 
-const SearchBar = ({ searchTerm, totalResults }) => {
+const SearchBar = ({ category, searchTerm, totalResults }) => {
   const [keyword, setKeyword] = useState("");
-  const navigate = useNavigate();
+  let navigate = useNavigate();
 
   const handleSearch = useCallback(() => {
     if (keyword.trim().length > 0) {
-      navigate(`search/${keyword}`);
+      navigate(`/${category}/search/${keyword}`);
     }
-  }, [keyword, navigate]);
+  }, [keyword, navigate, category]);
 
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.keyCode === 13) {
         handleSearch();
         setKeyword("");
-        window.scrollTo(0);
+        window.scrollTo({ top: 0 });
       }
     };
     document.addEventListener("keypress", handleKeyPress);
@@ -41,13 +41,13 @@ const SearchBar = ({ searchTerm, totalResults }) => {
   const handleClick = () => {
     handleSearch();
     setKeyword("");
-    window.scrollTo(0);
+    window.scrollTo({ top: 0 });
   };
 
   const handleBack = () => {
     navigate(-1);
     setKeyword("");
-    window.scrollTo(0);
+    window.scrollTo({ top: 0 });
   };
 
   return (
@@ -71,8 +71,7 @@ const SearchBar = ({ searchTerm, totalResults }) => {
       {searchTerm && (
         <Info>
           Show search results for <span>{searchTerm}</span> with a total of
-          <span>{totalResults}</span> result{totalResults > 1 && "s"}. Please
-          back before searching again!
+          <span>{totalResults}</span> result{totalResults > 1 && "s"}.{" "}
         </Info>
       )}
     </Wrapper>
@@ -80,7 +79,8 @@ const SearchBar = ({ searchTerm, totalResults }) => {
 };
 
 SearchBar.propTypes = {
-  searchTerm: PropTypes.string,
+  category: PropTypes.string.isRequired,
+  searchTerm: PropTypes.string.isRequired,
   totalResults: PropTypes.number,
 };
 

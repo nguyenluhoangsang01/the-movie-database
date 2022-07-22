@@ -38,14 +38,16 @@ const MovieList = ({ title, type, category, link, id }) => {
       <Content>
         <ContentHeader>
           <HeadingText>{title}</HeadingText>
-          <Link to={link} onClick={() => window.scrollTo(0)}>
-            <Button transparent boxShadowUnset border outline>
-              View more
-              <span>
-                <BiRightArrowAlt />
-              </span>
-            </Button>
-          </Link>
+          {type !== "similar" && (
+            <Link to={link} onClick={() => window.scrollTo({ top: 0 })}>
+              <Button transparent boxShadowUnset border outline>
+                View more
+                <span>
+                  <BiRightArrowAlt />
+                </span>
+              </Button>
+            </Link>
+          )}
         </ContentHeader>
 
         <ContentBody grabCursor spaceBetween={10} slidesPerView={"auto"}>

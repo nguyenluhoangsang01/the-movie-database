@@ -38,14 +38,7 @@ const Header = () => {
   return (
     <Wrapper ref={headerRef}>
       <Content>
-        <Link
-          to="/"
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-            })
-          }
-        >
+        <Link to="/" onClick={() => window.scrollTo({ top: 0 })}>
           <LogoImg src={RMDBLogo} alt="react-movie-logo" />
         </Link>
 
@@ -57,7 +50,7 @@ const Header = () => {
               style={({ isActive }) => ({
                 borderBottom: isActive ? "2px solid var(--main-color)" : "none",
               })}
-              onClick={() => window.scrollTo(0)}
+              onClick={() => window.scrollTo({ top: 0 })}
             >
               {item.name}
             </NavLink>

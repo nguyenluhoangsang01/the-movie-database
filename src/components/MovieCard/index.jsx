@@ -8,7 +8,7 @@ const MovieCard = ({ item, category }) => {
   return (
     <StyledLink
       to={`/${category}/${item.id}`}
-      onClick={() => window.scrollTo(0)}
+      onClick={() => window.scrollTo({ top: 0 })}
     >
       <ImageSlide
         src={

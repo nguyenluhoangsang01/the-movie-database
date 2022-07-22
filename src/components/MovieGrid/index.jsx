@@ -64,7 +64,11 @@ const MovieGrid = () => {
 
   return (
     <Wrapper>
-      <SearchBar searchTerm={keyword} totalResults={totalResults} />
+      <SearchBar
+        category={category}
+        searchTerm={keyword}
+        totalResults={totalResults}
+      />
 
       <Content>
         {item.map((item) => (

@@ -19,13 +19,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <Content>
-        <FooterLogo
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-            })
-          }
-        >
+        <FooterLogo onClick={() => window.scrollTo({ top: 0 })}>
           <FooterLogoImg src={TMDBLogo} alt="react-movie-logo" />
         </FooterLogo>
 
