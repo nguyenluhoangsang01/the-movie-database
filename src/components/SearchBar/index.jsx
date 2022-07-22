@@ -1,15 +1,14 @@
+import PropTypes from "prop-types";
 import React, { useCallback, useEffect, useState } from "react";
-import { BiArrowBack, BiSearch } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import {
-  BackButton,
   Content,
   Info,
   SearchButton,
   StyledInput,
   Wrapper,
 } from "./SearchBar.style";
-import PropTypes from "prop-types";
 
 const SearchBar = ({ category, searchTerm, totalResults }) => {
   const [keyword, setKeyword] = useState("");
@@ -44,17 +43,8 @@ const SearchBar = ({ category, searchTerm, totalResults }) => {
     window.scrollTo({ top: 0 });
   };
 
-  const handleBack = () => {
-    navigate(-1);
-    setKeyword("");
-    window.scrollTo({ top: 0 });
-  };
-
   return (
     <Wrapper>
-      <BackButton onClick={handleBack}>
-        <BiArrowBack />
-      </BackButton>
       <Content>
         <StyledInput
           type="text"

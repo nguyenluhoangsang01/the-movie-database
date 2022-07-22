@@ -27,18 +27,6 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const BackButton = styled.button`
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--txt-color);
-  transition: var(--transition);
-
-  :hover {
-    color: var(--main-color);
-  }
-`;
-
 export const SearchButton = styled.button`
   font-size: 2.5rem;
   cursor: pointer;
