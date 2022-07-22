@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 		--font-small: 1.1rem;
 		--font-close-button: 2.5rem;
 
-		--transition: all 0.2s ease;
+		--transition: all 0.2s linear;
 	}
 
 	* {

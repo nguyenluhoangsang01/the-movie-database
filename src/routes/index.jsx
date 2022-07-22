@@ -33,7 +33,7 @@ const RoutesList = () => {
       <Route path="/:category/:id" element={<Detail />} />
       <Route path="/:category" element={<Catalog />} />
 
-      <Route path="/*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

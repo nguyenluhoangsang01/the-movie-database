@@ -31,7 +31,7 @@ export const Heading = styled.h2`
   line-height: 1;
   cursor: auto;
   transition: var(--transition-top-opacity);
-  animation: ${({ slideChanged }) => slideChanged && "topToBottom 0.7s ease"};
+  animation: ${({ slideChanged }) => slideChanged && "topToBottom 0.7s linear"};
 
   @media screen and (max-width: 768px) {
     font-size: 4rem;
@@ -45,7 +45,7 @@ export const Overview = styled.p`
   line-height: 1.5;
   cursor: auto;
   transition: var(--transition);
-  animation: ${({ slideChanged }) => slideChanged && "topToBottom 1.5s ease"};
+  animation: ${({ slideChanged }) => slideChanged && "topToBottom 1.5s linear"};
 
   @media screen and (max-width: 768px) {
     font-size: var(--font-med);
@@ -57,14 +57,14 @@ export const Actions = styled.div`
   display: flex;
   gap: 3rem;
   transition: var(--transition);
-  animation: ${({ slideChanged }) => slideChanged && "topToBottom 2s ease"};
+  animation: ${({ slideChanged }) => slideChanged && "topToBottom 2s linear"};
 `;
 
 export const Poster = styled.img`
   border-radius: var(--border-radius);
   width: 32rem;
   transition: var(--transition);
-  animation: ${({ slideChanged }) => slideChanged && "zoomOut 0.5s ease "};
+  animation: ${({ slideChanged }) => slideChanged && "zoomOut 0.5s linear"};
   height: 100%;
 
   @media screen and (max-width: 1024px) {
