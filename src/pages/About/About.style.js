@@ -19,13 +19,26 @@ export const Content = styled.div`
     display: flex;
     gap: 8rem;
 
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 0;
+    }
+
     .height {
       width: 70%;
       height: 100%;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
     }
 
     .sidebar {
       width: 30%;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
 
       h4 {
         font-weight: 500;
