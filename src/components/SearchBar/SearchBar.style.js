@@ -78,4 +78,8 @@ export const Info = styled.div`
     margin: 0 1rem;
     text-transform: uppercase;
   }
+
+  .red {
+    color: red;
+  }
 `;

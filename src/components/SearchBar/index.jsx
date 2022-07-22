@@ -70,8 +70,11 @@ const SearchBar = ({ category, searchTerm, totalResults }) => {
 
       {searchTerm && (
         <Info>
-          Show search results for <span>{searchTerm}</span> with a total of
-          <span>{totalResults}</span> result{totalResults > 1 && "s"}.{" "}
+          Show search results for{" "}
+          <span className={totalResults === 0 && "red"}>{searchTerm}</span> with
+          a total of
+          <span className={totalResults === 0 && "red"}>{totalResults}</span>
+          result{totalResults > 1 && "s"}.
         </Info>
       )}
     </Wrapper>
